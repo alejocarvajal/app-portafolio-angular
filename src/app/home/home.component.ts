@@ -15,11 +15,11 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.cargarData();   
+    this.cargarData();
   }
 
   public cargarData() {
-    this.RestService.get('https://jsonplaceholder.typicode.com/posts')
+    this.RestService.get('http://localhost:3000/posts')
       .subscribe(respuesta => {
         console.log(respuesta);
         this.listdeVideos = respuesta;
